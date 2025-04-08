@@ -1,362 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bees & Pollination</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-  <style>
-    /* General Body Styles */
-    body {
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      color: #e0e0e0;
-      background-color: #121212;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bees & Pollination</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            background-color: #121212;
+        }
 
-    h1, h2 {
-      font-weight: 600;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+        h1, h2 {
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-    /* Header Styles with Honeycomb Background */
-    header {
-      padding: 40px 20px;
-      background: url('bee-header.png') no-repeat center center;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      position: relative;
-    }
+        /* Header Styles with Honeycomb Background */
+        header {
+            padding: 40px 20px;
+            background: url('bee-header.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            position: relative;
+        }
 
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-      font-weight: 600;
-    }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: 600;
+        }
 
-    header p {
-      font-size: 16px;
-      margin: 10px 0 0;
-      font-weight: 300;
-    }
+        header p {
+            font-size: 16px;
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
 
-    /* Navigation Styles */
-    nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 30px;
-      width: 80%;
-      max-width: 900px;
-      margin: 0 auto 40px;
-      padding: 5px 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transform: translateY(-20px);
-    }
+        /* Navigation Styles */
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 30px;
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 5px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px);
+        }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    nav ul li {
-      margin: 5px;
-    }
+        nav ul li {
+            margin: 5px;
+        }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #e0e0e0;
-      font-weight: 500;
-      padding: 10px 15px;
-      display: block;
-      transition: color 0.3s;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 500;
+            padding: 10px 15px;
+            display: block;
+            transition: color 0.3s;
+        }
 
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
 
-    /* Section Grid Layout */
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        /* Section Grid Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    /* Section Styles */
-    section {
-      padding: 30px;
-      margin-bottom: 30px;
-      background-color: #1e1e1e;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-    }
+        /* Section Styles */
+        section {
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
 
-    section h2 {
-      margin-top: 0;
-      font-size: 28px;
-      border-bottom: 2px solid #ffcc00;
-      padding-bottom: 10px;
-      display: inline-block;
-    }
+        section h2 {
+            margin-top: 0;
+            font-size: 28px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
 
-    section p {
-      line-height: 1.6;
-    }
+        section p {
+            line-height: 1.6;
+        }
 
-    /* Bee Image Styles */
-    .bee-image {
-      width: 150px;
-      margin: 20px 0;
-    }
+        /* Bee Image Styles */
+        .bee-image {
+            width: 150px;
+            margin: 20px 0;
+        }
 
-    /* Dropdown Button Styles */
-    .dropdown {
-      margin-top: 15px;
-    }
+        /* Dropdown Button Styles */
+        .dropdown {
+            margin-top: 15px;
+        }
 
-    p a {
-      color: #656255;
-      text-decoration: none;
-    }
+        p a {
+            color: #656255;
+            text-decoration: none;
+        }
 
-    p a:hover {
-      text-decoration: underline;
-    }
+        p a:hover {
+            text-decoration: underline;
+        }
 
-    .dropdown button {
-      background-color: #ffcc00;
-      color: #121212;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 250px;
-      margin: 0 auto;
-      transition: background-color 0.3s;
-    }
+        .dropdown button {
+            background-color: #ffcc00;
+            color: #121212;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
 
-    .dropdown button:hover {
-      background-color: #e6b800;
-    }
+        .dropdown button:hover {
+            background-color: #e6b800;
+        }
 
-    .dropdown button::before {
-      content: "";
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      margin-right: 8px;
-      background: url('cute-bee.png') no-repeat center center;
-      background-size: contain;
-    }
+        .dropdown button::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+            background: url('cute-bee.png') no-repeat center center;
+            background-size: contain;
+        }
 
-    .dropdown-content {
-      margin-top: 15px;
-      background-color: #2a2a2a;
-      border-radius: 10px;
-      padding: 15px;
-      display: none;
-    }
+        .dropdown-content {
+            margin-top: 15px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 15px;
+            display: none;
+        }
 
-    .dropdown-content ul {
-      padding-left: 20px;
-      margin: 10px 0;
-    }
+        .dropdown-content ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
 
-    .dropdown-content li {
-      margin-bottom: 10px;
-    }
+        .dropdown-content li {
+            margin-bottom: 10px;
+        }
 
-    /* Sources Section */
-    #sources ul {
-      list-style-type: none;
-      padding: 0;
-    }
+        /* Sources Section */
+        #sources ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    #sources li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-    }
+        #sources li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
 
-    #sources li::before {
-      content: "•";
-      color: #ffcc00;
-      font-size: 20px;
-      margin-right: 10px;
-    }
+        #sources li::before {
+            content: "•";
+            color: #ffcc00;
+            font-size: 20px;
+            margin-right: 10px;
+        }
 
-    #sources a {
-      color: #4db2ff;
-      text-decoration: none;
-    }
+        #sources a {
+            color: #4db2ff;
+            text-decoration: none;
+        }
 
-    #sources a:hover {
-      text-decoration: underline;
-    }
+        #sources a:hover {
+            text-decoration: underline;
+        }
 
-    /* Media Queries for Responsiveness */
-    @media (max-width: 900px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
 
-      nav {
-        width: 90%;
-      }
+            nav {
+                width: 90%;
+            }
 
-      header h1 {
-        font-size: 42px;
-      }
-    }
+            header h1 {
+                font-size: 42px;
+            }
+        }
 
-    /* "How to Help" section bullet styles */
-    #help ul {
-      list-style-type: none;
-      padding-left: 5px;
-    }
+        /* "How to Help" section bullet styles */
+        #help ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
 
-    #help li {
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 25px;
-    }
+        #help li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
 
-    #help li::before {
-      content: "•";
-      color: #ffcc00;
-      position: absolute;
-      left: 0;
-      font-size: 20px;
-    }
-  </style>
+        #help li::before {
+            content: "•";
+            color: #ffcc00;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
 <header>
-  <h1>Bees & Pollination</h1>
-  <p>Honey bees contribute nearly $20 billion to the value of U.S. crop production each year<a href="#source1">[1]</a>.
-  </p>
+    <h1>Bees & Pollination</h1>
+    <p>Honey bees contribute nearly $20 billion to the value of U.S. crop production each year<a
+            href="https://abfnet.org/pollination-facts/">[1]</a>.
+    </p>
 </header>
 
 <nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#importance">Why Bees Matter</a></li>
-    <li><a href="#threats">Threats to Bees</a></li>
-    <li><a href="#help">How to Help</a></li>
-    <li><a href="#trivia">Fun Facts</a></li>
-    <li><a href="#sources">Sources</a></li>
-  </ul>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#importance">Why Bees Matter</a></li>
+        <li><a href="#threats">Threats to Bees</a></li>
+        <li><a href="#help">How to Help</a></li>
+        <li><a href="#trivia">Fun Facts</a></li>
+        <li><a href="#sources">Sources</a></li>
+    </ul>
 </nav>
 
 <div class="content-grid">
-  <section id="home">
-    <h2>Introduction</h2>
-    <p>Bees are vital pollinators, ensuring the reproduction of plants and contributing to global food security<a
-      href="#source2">[2]</a>. They are responsible for pollinating crops such as almonds, apples, and tomatoes<a
-      href="#source3">[3]</a>.</p>
-  </section>
+    <section id="home">
+        <h2>Introduction</h2>
+        <p>Bees are vital pollinators, ensuring the reproduction of plants and contributing to global food security<a
+                href="https://www.unep.org/news-and-stories/story/why-bees-are-essential-people-and-planet">[2]</a>.
+            They are responsible for pollinating crops such as almonds, apples, and tomatoes<a
+                    href="https://www.usda.gov/about-usda/general-information/initiatives-and-highlighted-programs/peoples-garden/importance-pollinators">[3]</a>.
+        </p>
+    </section>
 
-  <section id="importance">
-    <h2>Why Bees Matter</h2>
-    <p>Pollination by bees increases crop yield and quality.</p>
-    <div class="dropdown">
-      <button onclick="toggleDropdown('importance-content')">Learn More</button>
-      <div id="importance-content" class="dropdown-content">
-        <p>Pollination by bees increases crop yield and quality. For example, blueberries and cherries are 90% dependent
-          on honey bee pollination, while almonds rely entirely on honey bees.</p>
-        <p>Bees also support biodiversity by enabling plants to reproduce, which sustains ecosystems and wildlife
-          habitats.</p>
-      </div>
-    </div>
-  </section>
+    <section id="importance">
+        <h2>Why Bees Matter</h2>
+        <p>Pollination by bees increases crop yield and quality.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('importance-content')">Learn More</button>
+            <div id="importance-content" class="dropdown-content">
+                <p>Pollination by bees increases crop yield and quality. For example, blueberries and cherries are 90%
+                    dependent
+                    on honey bee pollination, while almonds rely entirely on honey bees.</p>
+                <p>Bees also support biodiversity by enabling plants to reproduce, which sustains ecosystems and
+                    wildlife
+                    habitats.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="threats">
-    <h2>Threats to Bees</h2>
-    <p>Bee populations face challenges like habitat loss and climate change.</p>
-    <div class="dropdown">
-      <button onclick="toggleDropdown('threats-content')">Learn More</button>
-      <div id="threats-content" class="dropdown-content">
-        <p>Bee populations face challenges like habitat loss, climate change, and pesticide use. These factors threaten
-          their survival and the ecosystems they support<a href="#source4">[4]</a>.</p>
-        <p>Climate change is particularly harmful as it disrupts the synchrony between bees and flowering plants,
-          reducing forage availability<a href="#source4">[4]</a>. Habitat fragmentation further isolates bee
-          populations, increasing extinction risks.</p>
-      </div>
-    </div>
-  </section>
+    <section id="threats">
+        <h2>Threats to Bees</h2>
+        <p>Bee populations face challenges like habitat loss and climate change.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('threats-content')">Learn More</button>
+            <div id="threats-content" class="dropdown-content">
+                <p>Bee populations face challenges like habitat loss, climate change, and pesticide use. These factors
+                    threaten
+                    their survival and the ecosystems they support<a
+                            href="https://phys.org/news/2020-08-sync-ecologists-climate-affecting-bee.html">[4]</a>.</p>
+                <p>Climate change is particularly harmful as it disrupts the synchrony between bees and flowering
+                    plants,
+                    reducing forage availability<a
+                            href="https://phys.org/news/2020-08-sync-ecologists-climate-affecting-bee.html">[4]</a>.
+                    Habitat fragmentation further isolates bee
+                    populations, increasing extinction risks.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="help">
-    <h2>How to Help</h2>
-    <p>Plant pollinator-friendly gardens with native flowers.</p>
-    <div class="dropdown">
-      <button onclick="toggleDropdown('help-content')">Learn More</button>
-      <div id="help-content" class="dropdown-content">
+    <section id="help">
+        <h2>How to Help</h2>
+        <p>Plant pollinator-friendly gardens with native flowers.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('help-content')">Learn More</button>
+            <div id="help-content" class="dropdown-content">
+                <ul>
+                    <li>Plant pollinator-friendly gardens with native flowers.</li>
+                    <li>Support local beekeepers by purchasing honey and beeswax products.</li>
+                    <li>Avoid or reduce pesticide use in your garden<a
+                            href="https://environmentamerica.org/center/articles/how-to-avoid-bee-killing-pesticides">[5]</a>
+                    </li>
+                    <li>Advocate for policies that protect pollinator habitats and reduce harmful agricultural
+                        practices.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="trivia">
+        <h2>Fun Facts</h2>
+        <p>Honey bees perform a "waggle dance" to communicate the location of food sources.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('trivia-content')">Learn More</button>
+            <div id="trivia-content" class="dropdown-content">
+                <p>Did you know that honey bees perform a "waggle dance" to communicate the location of food sources?
+                    This
+                    behavior enhances their efficiency in pollination<a
+                            href="https://beeculture.com/a-closer-look-waggle-dances/">[6]</a>.</p>
+                <p>The average worker bee produces about one-twelfth of a teaspoon of honey in its lifetime!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sources">
+        <h2>Sources</h2>
         <ul>
-          <li>Plant pollinator-friendly gardens with native flowers.</li>
-          <li>Support local beekeepers by purchasing honey and beeswax products.</li>
-          <li>Avoid or reduce pesticide use in your garden<a href="#source5">[5]</a></li>
-          <li>Advocate for policies that protect pollinator habitats and reduce harmful agricultural practices.</li>
+            <li><a href="https://abfnet.org/pollination-facts/" id="source1">American Beekeeping Federation</a></li>
+            <li><a href="https://www.unep.org/news-and-stories/story/why-bees-are-essential-people-and-planet"
+                   id="source2">United
+                Nations Environment Programme</a></li>
+            <li><a
+                    href="https://www.usda.gov/about-usda/general-information/initiatives-and-highlighted-programs/peoples-garden/importance-pollinators"
+                    id="source3">United States Department of Agriculture</a></li>
+            <li><a href="https://phys.org/news/2020-08-sync-ecologists-climate-affecting-bee.html"
+                   id="source4">Phys.org</a>
+            </li>
+            <li><a href="https://environmentamerica.org/center/articles/how-to-avoid-bee-killing-pesticides"
+                   id="source5">Environment
+                America</a></li>
+            <li><a href="https://beeculture.com/a-closer-look-waggle-dances/" id="source6">Bee Culture</a></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="trivia">
-    <h2>Fun Facts</h2>
-    <p>Honey bees perform a "waggle dance" to communicate the location of food sources.</p>
-    <div class="dropdown">
-      <button onclick="toggleDropdown('trivia-content')">Learn More</button>
-      <div id="trivia-content" class="dropdown-content">
-        <p>Did you know that honey bees perform a "waggle dance" to communicate the location of food sources? This
-          behavior enhances their efficiency in pollination<a href="#source6">[6]</a>.</p>
-        <p>The average worker bee produces about one-twelfth of a teaspoon of honey in its lifetime!</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="sources">
-    <h2>Sources</h2>
-    <ul>
-      <li><a href="https://abfnet.org/pollination-facts/" id="source1">American Beekeeping Federation</a></li>
-      <li><a href="https://www.unep.org/news-and-stories/story/why-bees-are-essential-people-and-planet" id="source2">United
-        Nations Environment Programme</a></li>
-      <li><a
-        href="https://www.usda.gov/about-usda/general-information/initiatives-and-highlighted-programs/peoples-garden/importance-pollinators"
-        id="source3">United States Department of Agriculture</a></li>
-      <li><a href="https://phys.org/news/2020-08-sync-ecologists-climate-affecting-bee.html" id="source4">Phys.org</a>
-      </li>
-      <li><a href="https://environmentamerica.org/center/articles/how-to-avoid-bee-killing-pesticides" id="source5">Environment
-        America</a></li>
-      <li><a href="https://beeculture.com/a-closer-look-waggle-dances/" id="source6">Bee Culture</a></li>
-    </ul>
-  </section>
+    </section>
 </div>
 
 <script>
-  function toggleDropdown(id) {
-    const content = document.getElementById(id);
-    content.style.display = content.style.display === "block" ? "none" : "block";
-  }
+    function toggleDropdown(id) {
+        const content = document.getElementById(id);
+        content.style.display = content.style.display === "block" ? "none" : "block";
+    }
 </script>
 </body>
 </html>
